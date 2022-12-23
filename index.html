@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/com.css">
+
+  <!-- Título da Página -->
+  <title>CloakerAds</title>
+
+  <style type="text/css">
+    header {
+      color: white;
+      /*background-image: url("./assets/img/rose-petals.svg");*/
+      background-color: rgba(0, 0, 0, 0.99);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: darken;
+      font: "Source Sans Pro", sans-serif;
+    }
+  </style>
+
+  <script>
+
+    setTimeout(
+      function () {
+        $(document).ready(function ($) {
+          URLModifier('sck'); // replace VTID to any key
+        });
+      }, 1000);
+
+
+    function URLModifier(customKey) {
+      var searchKeyWord = 'tid'; // replace utm_campaign to any key you want to search for
+      var searchKeyWordUrl = getParamFromURL(searchKeyWord);
+      if (searchKeyWordUrl) {
+        $('[data-page-redirect-url]').each(function () {
+          var currentLinkUrl = $(this).data('page-redirect-url');
+          if (typeof currentLinkUrl !== "undefined") //Anchor Links
+          {
+            var modifiedUrl = currentLinkUrl + (currentLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
+            $(this).attr('data-page-redirect-url', modifiedUrl);
+          }
+        });
+        //searchKeyWordUrl = searchKeyWordUrl + '_optin1';
+        $('a').each(function () {
+          var currentLinkUrl = $(this).attr('href');
+          if (typeof currentLinkUrl !== "undefined") //Anchor Links
+          {
+            var modifiedUrl = currentLinkUrl + (currentLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
+            $(this).attr('href', modifiedUrl);
+          }
+          else // Image Links
+          {
+            var currentImgLinkUrl = $(this).attr('data-imagelink');
+            var modifiedImgUrl = currentImgLinkUrl + (currentImgLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
+            $(this).attr('data-imagelink', modifiedImgUrl);
+          }
+        });
+      }
+    }
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1074337983238454');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1074337983238454&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <header class="py-4" style="background: linear-gradient(90deg, #000000 0%, #0f0a1c 100%);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <!-- Imagem Ultrasecreto -->
+          <!--<img class="img-fluid" src="./assets/img/ultrasecreto.svg">-->
+
+          <!-- Headline -->
+          <h3 class="my-4">
+            <b style="font-size: 30pt;">
+              Trabalhe com ofertas do NICHO BLACK sem tomar nenhum bloqueio e sem perder tráfego...
+            </b>
+            <b style="display: none;">Elimine os bloqueios do Facebook Ads, Bing Ads ou Google Ads
+              apenas cadastrando a URL da sua página ou link de afiliado...</b>
+          </h3>
+
+          <!-- VSL -->
+          <!--<script type="text/javascript" id="scr_62279575aa8f7e00086fa73e">var s=document.createElement("script");s.src="https://cdn.converteai.net/ccdae62e-116b-492f-9648-160a0c5bfcc3/players/62279575aa8f7e00086fa73e/player.js",s.async=!0,document.head.appendChild(s);</script>-->
+          <div style="position:relative;padding-top:56.25%;">
+            <div id="content-iframe-vls" style="display: none;">
+            </div>
+
+            <iframe id="panda-9b1802cd-5787-4795-b975-19f5f2f5a8e3"
+              src="https://player-vz-7dbce0f8-14c.tv.pandavideo.com.br/embed/?v=9b1802cd-5787-4795-b975-19f5f2f5a8e3"
+              style="border:none;position:absolute;top:0;left:0"
+              allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true
+              width="100%" height="100%"></iframe>
+            <!--v2 <iframe id="panda-97ba3468-0534-449d-8e55-c50dfd118e21" src="https://player-vz-7dbce0f8-14c.tv.pandavideo.com.br/embed/?v=97ba3468-0534-449d-8e55-c50dfd118e21" style="border:none;position:absolute;top:0;left:0" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%"></iframe>-->
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <section class="container-fluid /*d-none*/" style="background-color: #f0f0f0;">
+    <div class="container p-5" style="color: #171717">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p style="font-size:4rem">Escolha o seu plano abaixo</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-4 col-md-12 mb-4 mt-4">
+          <div class="card h-100 shadow-lg">
+            <div class="card-body">
+              <div class="text-center p-3">
+                <h5 class="card-title">Basic</h5>
+                <small>1.000 acessos</small>
+                <br><br>
+                <span class="h2">R$ 49,99</span>/mês
+                <br><br>
+              </div>
+              <p class="card-text">O valor é fixo, não conta com valores extras.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fa-solid fa-circle-check"></i> Todas as features do CloakerAds
+              </li>
+              <li class="list-group-item"><i class="fa-solid fa-circle-check"></i> 1k acessos</li>
+              <li class="list-group-item"><i class="fa-solid fa-circle-check"></i> R$ 0,05 por acesso</li>
+            </ul>
+            <div class="card-body text-center">
+              <a href="https://pay.kiwify.com.br/GEnKnKZ" class="btn btn-block btn-dark btn-lg"
+                style="border-radius:30px">Selecionar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4">
+
+          <div class="card h-100 shadow-lg">
+            <div class="text-center" style="background-color: #000; color: #fff; padding: 5px;">
+              MAIS POPULAR
+            </div>
+            <div class="card-body">
+              <div class="text-center p-3">
+                <h5 class="card-title">Standard</h5>
+                <small>10.000 acessos</small>
+                <br><br>
+                <span class="h2">R$ 79,99</span>/mês
+                <br><br>
+              </div>
+              <p class="card-text">O valor é fixo, não conta com valores extras.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fa-solid fa-circle-check"></i> Todas as features do CloakerAds
+              </li>
+              <li class="list-group-item"><i class="fa-solid fa-circle-check"></i> 10k acessos</li>
+              <li class="list-group-item"><i class="fa-solid fa-circle-check"></i> R$ 0,008 por acesso</li>
+            </ul>
+            <div class="card-body text-center">
+              <a href="https://pay.kiwify.com.br/NoXceX4" class="btn btn-block btn-dark btn-lg"
+                style="border-radius:30px">Selecionar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mt-4">
+          <div class="card h-100 shadow-lg">
+            <div class="card-body">
+              <div class="text-center p-3">
+                <h5 class="card-title">Premium</h5>
+                <small>20.000 acessos</small>
+                <br><br>
+                <span class="h2">R$ 99,99</span>/mês
+                <br><br>
+              </div>
+              <p class="card-text">O valor é fixo, não conta com valores extras.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fa-solid fa-circle-check"></i>Todas as features do CloakerAds
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-circle-check"></i> 20k acessos
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-circle-check"></i> R$ 0,005 por acesso
+              </li>
+            </ul>
+            <div class="card-body text-center">
+              <a href="https://pay.kiwify.com.br/qPoKvgh" class="btn btn-block btn-dark btn-lg"
+                style="border-radius:30px">Selecionar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="container-fluid" style="background-color: #f0f0f0;">
+    <div class="container p-5" style="color: #171717">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p style="font-size:4rem">Exemplos de conteúdos abaixo</p>
+          <p>
+            Observe abaixo os tipos de conteúdo que pode trabalhar em sua Landing Page, este site é um exemplo, você
+            chegou até aqui através de um anúncio
+            e se não fosse o algorítimo do CloakerAds, certamente o boot do facebook iria restringir a conta de anúncio.
+            Abaixo temos imagens e títulos TOTALMENTE BLACK.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="container-fluid" style="background-color: #f0f0f0;">
+    <div class="container p-5" style="color: #171717">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Emagreça 20 kilos em 7 dias</h1>
+        </div>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <img src="./assets/img/ads-examples/emagrecimento-antes-depois.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid" style="background-color: #f0f0f0;">
+    <div class="container p-5" style="color: #171717">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Acompanhante de luxos</h1>
+        </div>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <img src="./assets/img/ads-examples/conteudo-picante.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid" style="background-color: #f0f0f0;">
+    <div class="container p-5" style="color: #171717">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Bebida alcoólica</h1>
+        </div>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <img src="./assets/img/ads-examples/bebida-alcoolica.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark py-3 text-center">
+    <div class="text-white"><a href="termos.html" class="text-white">Termos de uso</a> | <a href="privacidade.html"
+        class="text-white">Política de privacidade</a></div>
+  </footer>
+
+  <link rel="stylesheet"
+    href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+  <a id="robbu-whatsapp-button" target="_blank"
+    href="https://api.whatsapp.com/send?phone=5512981559842&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20plataforma%20CloakerAds.">
+    <div class="rwb-tooltip">Enviar Mensagem</div>
+    <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+  </a>
+
+  <script type="text/javascript">
+    setTimeout(() => { document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none") }, 1020000); // temporização da Call to Action (em milissegundos)
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/com.js"></script>
+</body>
+
+</html>
