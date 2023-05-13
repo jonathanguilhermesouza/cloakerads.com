@@ -67,7 +67,7 @@
   }
   
   // Localizar todos os botões e links de ação na página
-  var buttonsAndLinks = document.querySelectorAll('button, a');
+  var buttonsAndLinks = document.querySelectorAll('button:not([href^="#"]), a:not([href^="#"])');
 
   // Inserir os parâmetros da URL em cada botão ou link de ação encontrado
   for (var i = 0; i < buttonsAndLinks.length; i++) {
@@ -96,7 +96,6 @@
     }
   }
 });
-
 </script>
 </head>
 <body>
