@@ -491,7 +491,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script language="javascript">
     // Consultar a API ip-api.com
-      fetch('http://ip-api.com/json/')
+      fetch('https://ipinfo.io/json/')
         .then(response => response.json())
         .then(data => {
           $('#cityuser').text(data.city);
