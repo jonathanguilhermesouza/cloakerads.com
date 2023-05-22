@@ -490,15 +490,9 @@
   <script src="./assets/js/com.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script language="javascript">
-    // Consultar a API ip-api.com
-      fetch('https://ipinfo.io/json/')
-        .then(response => response.json())
-        .then(data => {
-          $('#cityuser').text(data.city);
-        })
-        .catch(error => {
-          console.error('Erro ao obter a cidade por IP: ', error);
-        });
+     $.get("https://ipinfo.io/json", function (response) {
+      $("#cityuser").html(response.city);
+      }, "jsonp");
   </script>
 </body>
 
