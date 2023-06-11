@@ -13,7 +13,7 @@
         const e = document.querySelectorAll('[data-demonstration="listWrapper"] > *'),
             t = document.querySelectorAll('[data-demonstration="demonstrationWrapper"]');
         let s;
-        const i = ["camuflagem.jpg", "rastreio.jpg", "metadados.jpg", "analise-criativo.jpg", "criptografia-russa.jpg", "templates-landingpage.jpg", "plr-find.jpg", "clonador.jpg", "relatorios.jpg"];
+        const i = ["camuflagem.jpg", "rastreio.jpg", "facebook-auto-post.jpg", "metadados.jpg", "analise-criativo.jpg", "criptografia-russa.jpg", "templates-landingpage.jpg", "plr-find.jpg", "clonador.jpg", "relatorios.jpg"];
         e.length,
             t.length &&
                 e.forEach((e, n) => {
