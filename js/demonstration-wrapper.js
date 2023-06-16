@@ -13,7 +13,8 @@
         const e = document.querySelectorAll('[data-demonstration="listWrapper"] > *'),
             t = document.querySelectorAll('[data-demonstration="demonstrationWrapper"]');
         let s;
-        const i = ["camuflagem.jpg", "rastreio.jpg", "facebook-auto-post.jpg", "metadados.jpg", "analise-criativo.jpg", "criptografia-russa.jpg", "templates-landingpage.jpg", "plr-find.jpg", "clonador.jpg", "relatorios.jpg"];
+        //const i = ["camuflagem.jpg", "rastreio.jpg", "facebook-auto-post.jpg", "metadados.jpg", "analise-criativo.jpg", "criptografia-russa.jpg", "templates-landingpage.jpg", "plr-find.jpg", "clonador.jpg", "relatorios.jpg"];
+        const i = ["4v1RbKZ7JP8", "lg6aH3Z-jQ0", "FFB8JUhEhjw", "5wdy-nCMMdk", "jg97t-y9puE", "JacSDxaybeQ", "B9KPyGBAGkM", "RdI-R_p9E8A", "GiZVg9rFwc4"];
         e.length,
             t.length &&
                 e.forEach((e, n) => {
@@ -24,7 +25,8 @@
                                 t.forEach((e) => {
                                     e.classList.add("hide");
                                 }),
-                                (t[e].querySelector("img").src = `./img/tools/${i[e]}`),
+                                //(t[e].querySelector("img").src = `./img/tools/${i[e]}`),
+                                (t[e].querySelector("iframe").src = `https://www.youtube.com/embed/${i[e]}`),
                                 t[e].classList.remove("hide"));
                         })(n)
                     );
